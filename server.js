@@ -26,3 +26,7 @@ app.use("/create", routes);
 // listen on port 3000
 var port = process.env.PORT || 3000;
 app.listen(port);
+
+// drop old database
+// create a new jawsdb
+// add db.sync stuff and deploy to heroku
