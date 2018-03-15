@@ -4,6 +4,12 @@ var router = express.Router();
 // importing entire models folder here, which has Burger exported from burger.js
 var db = require("../models/");
 
+// Extracts the sequelize connection from the models object
+var sequelizeConnection = models.sequelize;
+
+// Sync the tables
+sequelizeConnection.sync();
+
 // get route -> index
 router.get("/", function(req, res) {
   res.redirect("/burgers");
