@@ -28,10 +28,16 @@ app.use("/create", routes);
 // listen on port 3000
 var PORT = process.env.PORT || 3000;
 
+
+// create a new jawsdb
+// add db.sync stuff and deploy to heroku
+
+
+
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
-
-  
-// create a new jawsdb
-// add db.sync stuff and deploy to heroku
+});
