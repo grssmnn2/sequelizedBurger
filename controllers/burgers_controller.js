@@ -46,6 +46,7 @@ router.put("/burgers/update/:id", function(req, res) {
     console.log(result);
     // Send back response and let page reload from .done in Ajax
     res.json("/");
+
   });
 });
 
