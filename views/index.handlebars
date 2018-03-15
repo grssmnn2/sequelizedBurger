@@ -45,30 +45,3 @@
 	</div>
 </div>
 
-
-{{!-- click functions stay here --}}
-   <script src="https://code.jquery.com/jquery.js"></script>   
-<script>
-
-  $(".change-devour").click(function (event) {
-   
-    var updateEaten = {
-      devoured: true
-    };
-
-    var id = $(this).attr("id");
-    console.log(id);
-
-    // Send the PUT request.
-    $.ajax("/burgers/create" + id, {
-      type: "PUT",
-      data: updateEaten
-    }).then(
-      function () {
-        console.log("you ate the burger");
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
-</script>
